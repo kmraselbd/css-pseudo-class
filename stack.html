@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo Class </title>
+  <style>
+    .container{
+      width: 600px;
+      margin: 20px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+input:focus{
+  outline: none;
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 5px;
+}
+input:checked{
+  width: 50px;
+  height: 50px;
+}
+button:disabled{
+  padding: 20px;
+}
+h2{
+  text-align: center;
+  position: relative;
+}
+h2::before, h2::after{
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  top: 45%;
+  
+}
+h2::before{
+  left: 25%;
+}
+h2::after{
+  right: 25%;
+}
+p,li{
+  line-height: 1.5;
+  font-size: 18px;
+}
+p::first-letter{
+  font-size: 50px;
+  color: red;
+}
+p::first-line{
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: bold;
+}
+p::selection{
+  background-color: green;
+  color: #fff;
+}
+li::marker{
+  color: blue;
+  font-weight: bold;
+  font-family: arial, sans-serif;
+}
+  </style>
+</head>
+<body>
+  <!-- <div class="container">
+    <h1>Pseudo Class</h1>
+  <input type="text" placeholder="Enter Your Name"><br><br>
+  <input type="email" placeholder="Enter Your Mail"> <br><br>
+  <input type="checkbox">Do you agree<br><br>
+  <input type="checkbox"> No <br><br>
+  <button disabled>Submit</button>
+</div> -->
+
+<div class="container">
+  <h2>Pseudo Element</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi veritatis assumenda, sunt consectetur nobis alias dolore quas modi deserunt fugit.</p>
+  <ol>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ol>
+</div>
+  
+</body>
+</html>
